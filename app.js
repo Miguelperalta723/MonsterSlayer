@@ -75,6 +75,12 @@ new Vue({
                 return true;
             }
             return false
-        }
+        },
+        printSvg(){
+                axios.post("localhost:1337/svgToPdf")
+                .then(res => {
+                    console.log(res)
+                })
+            }
     }
 })
